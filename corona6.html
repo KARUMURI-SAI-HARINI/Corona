@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Website Design Using HTML and CSS</title>
+	<link rel="stylesheet" href="corona6.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="images/india.jpg">	
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li>
+						<img src="images/covid1.png" width="200px" height="150px">
+					</li>
+					
+				</ul>
+			</div>
+		</nav>
+
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/indiaaa.jpg" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					
+					<div>
+						<h1>Lockdown</h1>
+						<p>-A lockdown is a requirement for people to stay where </p>
+						<p>&nbsp they are,usually due to specific risks to themselves </p> 
+						<p>&nbsp or to others if they can move freely.</p>
+					</div>
+				</div>
+				<div class="feature two">
+					
+					<div>
+						<h1>Gratitude</h1>
+						<p>-Doctor's,Policies,Sanitations Agents</p>
+						<p>-PM Narendra Modiji instructed people in India to </p>
+						<p>&nbsp clap their hands and lighten the lights.</p>
+						<p>-Air force praised them with flowers from the sky.</p>
+					</div>
+				</div>
+				<div class="feature three">
+					
+					<div>
+						<h1>Zones</h1>
+						<p>-They have divided the corona affected places into zones </p>
+						<p>w.r.t the number of cases "Red","Orange","Green"</p>
+					</div>
+
+				</div>
+				<div class="feature four">	
+					<div>
+						<h1>Timeline</h1>
+						<p>-Lockdown:-<br>
+								&nbsp Phase 1 (25 March – 14 April)<br>
+								&nbsp Phase 2 (15 April – 3 May)<br>
+								&nbsp Phase 3 (4–17 May)<br>
+								&nbsp Phase 4 (18–31 May)<br>
+							-Unlock:-<br>
+								&nbsp Unlock 1.0 (1–30 June)<br>
+								&nbsp Unlock 2.0 (1–31 July)<br>
+						</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="controls">
+			<img src="images/arrow.png" id="upBtn">
+			<h3>Corona</h3>
+			<img src="images/arrow.png" id="downBtn">
+		</div>
+	</div>
+
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("upBtn");
+		var downBtn = document.getElementById("downBtn");
+
+		var rotateValue = circle.style.transform;
+		var rotateSum;
+
+		downBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		upBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+	</script>
+
+	<footer>
+		
+	<div class="container">
+      <ul class="pagination">
+     
+        <li><a href="corona1.html">1 - Corona Virus</a></li>
+        <li><a href="corona2.html">2 - How it affects us</a></li>
+        <li><a href="corona3.html">3 - Virus History</a></li>
+        <li><a href="corona4.html">4 - Pros of Corona</a></li>
+        <li><a href="corona5.html">5 - World Economy</a></li>
+        <li><a href="corona6.html">6 - India vs Corona</a></li>
+       
+      </ul>
+    </div>
+
+    <script>
+      $("li").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+
+	</footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Website Design Using HTML and CSS</title>
+	<link rel="stylesheet" href="corona5.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="images/ec.jpg">	
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li>
+						<img src="images/wcc.jpg" height="100px" width="150px">
+					</li>
+					
+				</ul>
+			</div>
+		</nav>
+
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/change.jpg" class="mobile">
+			<div id="circle">
+				<div class="feature one">	
+					<div>
+						<h1>Countries</h1>
+						<p>-The pandemic,which was first detected in China,has infected people in 188 countries.</p>
+						<p>-Recently Newzealand declared their country as Corona free.</p>
+					</div>
+				</div>
+				<div class="feature two">
+					
+					<div>
+						<h1>Unemployement</h1>
+						<p>Unemployment rates have increased across major economies as a result.</p>
+					</div>
+				</div>
+				<div class="feature three">
+					
+					<div>
+						<h1>Tourism</h1>
+						<p>-The travel industry has been badly damaged, with airlines cutting</p> <p>flights and customers cancelling business trips and holidays.</p>
+						<p>-Many countries introduced travel restrictions to try to contain the virus.</p>
+					</div>
+				</div>
+				<div class="feature four">	
+					<div>
+						<h1>World Economy</h1>
+						<p>-It affects all countires economy</p>
+						<p>-"U","V',"L" in form of these patterns all countries future is predicted</p>
+						<p>-A country economy is restored if there in the shape of 'U','V'.</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="controls">
+			<img src="images/arrow.png" id="upBtn">
+			<h3>Corona</h3>
+			<img src="images/arrow.png" id="downBtn">
+		</div>
+	</div>
+
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("upBtn");
+		var downBtn = document.getElementById("downBtn");
+
+		var rotateValue = circle.style.transform;
+		var rotateSum;
+
+		downBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		upBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+	</script>
+
+	<footer>
+		
+	<div class="container">
+      <ul class="pagination">
+        
+        <li><a href="corona1.html">1 - Corona Virus</a></li>
+        <li><a href="corona2.html">2 - How it affects us</a></li>
+        <li><a href="corona3.html">3 - Virus History</a></li>
+        <li><a href="corona4.html">4 - Pros of Corona</a></li>
+        <li><a href="corona5.html">5 - World Economy</a></li>
+        <li><a href="corona6.html">6 - India vs Corona</a></li>
+       
+      </ul>
+    </div>
+
+    <script>
+      $("li").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+
+	</footer>
+</body>
+</html>

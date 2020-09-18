@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Website Design Using HTML and CSS</title>
+	<link rel="stylesheet" href="corona2.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="images/sneeze.jpg">	
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li>
+						<a href="#">India</a><br>
+						<a href="#">Active Cases :- 5.12M</a><br>
+						<a href="#">Recovered Cases :- 4.03M</a><br>
+						<a href="#">Death :- 83,198</a><br>
+					</li>
+					
+				</ul>
+			</div>
+		</nav>
+
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/cough.jpg" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					
+					<div>
+						<h1>How it affects us ..</h1>
+						<p>-COVID-19 affects different people in different ways.</p>
+						<p>-Most infected people will develop mild to moderate </p>
+						<p>&nbsp &nbsp illness and recover without Hospitalization</p>
+					</div>
+				</div>
+				<div class="feature two">	
+					<div>
+						<h1>Treatment</h1>
+						<p>-To date, there are no specific vaccines or medicines for COVID-19.</p>
+						<p>-Drink plenty of fluid,eat nutritious food.</p>
+						<p>-Self isolate yourselves</p>
+					</div>
+				</div>
+				<div class="feature three">
+					
+					<div>
+						<h1>Prevention</h1>
+						<p>-Clean your hands often</p>
+						<p>-Social Distancing</p>
+						<p>-Wear a Mask</p>
+						<p>-Stay Home Stay Safe :)</p>
+					</div>
+				</div>
+				<div class="feature four">	
+					<div>
+						<h1>Symptoms</h1>
+						<p>-Cough</p>
+						<p>-Fever</p>
+						<p>-Tiredness</p>
+						<p>-Headache</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="controls">
+			<img src="images/arrow.png" id="upBtn">
+			<h3>Corona</h3>
+			<img src="images/arrow.png" id="downBtn">
+		</div>
+	</div>
+
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("upBtn");
+		var downBtn = document.getElementById("downBtn");
+
+		var rotateValue = circle.style.transform;
+		var rotateSum;
+
+		downBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		upBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+	</script>
+
+	<footer>
+		
+	<div class="container">
+      <ul class="pagination">
+       
+        <li><a href="corona1.html">1 - Corona Virus</a></li>
+        <li><a href="corona2.html">2 - How it affects us</a></li>
+        <li><a href="corona3.html">3 - Virus History</a></li>
+        <li><a href="corona4.html">4 - Pros of Corona</a></li>
+        <li><a href="corona5.html">5 - World Economy</a></li>
+        <li><a href="corona6.html">6 - India vs Corona</a></li>
+        
+      </ul>
+    </div>
+
+    <script>
+      $("li").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+
+	</footer>
+</body>
+</html>

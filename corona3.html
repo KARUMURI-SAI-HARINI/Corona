@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Website Design Using HTML and CSS</title>
+	<link rel="stylesheet" href="corona3.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="images/origin.jpg">	
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li>
+						<p>1720 :- Plague</p>
+						<p>1820 :- Cholera</p>
+						<p>1920 :- Spanish Flu</p>
+						<p>2020 :- Corona Virus</p>
+					</li>		
+				</ul>
+			</div>
+		</nav>
+
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/xray.jpg" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					
+					<div>
+						<h1>CORONA VIRUS</h1>
+						<p>-Originated in bats or pangolins</p>
+						<p>-The first known cases of COVID-19 </p>
+						<p>&nbsp &nbsp were in Wuhan, CHINA.</p>
+					</div>
+				</div>
+				<div class="feature two">
+					
+					<div>
+						<h1>Shape</h1>
+						<p>-Large,roughly spherical,particles with bulbous surface projections</p>
+						<p>-Average diameter of the virus particles is around 125 nm</p>
+					</div>
+				</div>
+				<div class="feature three">
+					
+					<div>
+						<h1>Discovered at:-</h1>
+						<p>-Coronaviruses were first discovered in the 1930s,</p>
+						<p>&nbsp when an acute respiratory infection of domesticated</p>
+						<p>&nbsp chickens was shown to be caused by infectious bronchitis virus</p>
+					</div>
+				</div>
+				<div class="feature four">	
+					<div>
+						<h1>Family of COVID-19</h1>
+						<p>-Coronaviruses constitute the subfamily of</p>
+						<p>&nbsp Orthocoronavirinae,in the family Coronaviridae,</p>
+						<p>&nbsp order Nidovirales,and realm Riboviria</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="controls">
+			<img src="images/arrow.png" id="upBtn">
+			<h3>Corona</h3>
+			<img src="images/arrow.png" id="downBtn">
+		</div>
+	</div>
+
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("upBtn");
+		var downBtn = document.getElementById("downBtn");
+
+		var rotateValue = circle.style.transform;
+		var rotateSum;
+
+		downBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		upBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+	</script>
+
+	<footer>
+		
+	<div class="container">
+      <ul class="pagination">
+       
+        <li><a href="corona1.html">1 - Corona Virus</a></li>
+        <li><a href="corona2.html">2 - How it affects us</a></li>
+        <li><a href="corona3.html">3 - Virus History</a></li>
+        <li><a href="corona4.html">4 - Pros of Corona</a></li>
+        <li><a href="corona5.html">5 - World Economy</a></li>
+        <li><a href="corona6.html">6 - India vs Corona</a></li>
+        
+      </ul>
+    </div>
+
+    <script>
+      $("li").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+
+	</footer>
+</body>
+</html>

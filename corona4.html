@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Website Design Using HTML and CSS</title>
+	<link rel="stylesheet" href="corona4.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="images/nature.jpg">	
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li>
+						<img src="images/traffic2.png">
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/goodcovid.jpg" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					
+					<div>
+						<h2>Ozone layer is recovering</h2>
+						
+					</div>
+				</div>
+				<div class="feature two">
+					
+					<div>
+						<h2>Pollution has been decreased</h2>
+						
+					</div>
+				</div>
+				<div class="feature three">
+					
+					<div>
+						<h2>Environment is healing</h2>
+						
+					</div>
+				</div>
+				<div class="feature four">	
+					<div>
+						<h2>Relationships are becoming stronger</h2>
+						<p>It is remembering our Indian Culture , our roots</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="controls">
+			<img src="images/arrow.png" id="upBtn">
+			<h3>Corona</h3>
+			<img src="images/arrow.png" id="downBtn">
+		</div>
+	</div>
+
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("upBtn");
+		var downBtn = document.getElementById("downBtn");
+
+		var rotateValue = circle.style.transform;
+		var rotateSum;
+
+		downBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		upBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+	</script>
+
+	<footer>
+		
+	<div class="container">
+      <ul class="pagination">
+        
+        <li><a href="corona1.html">1 - Corona Virus</a></li>
+        <li><a href="corona2.html">2 - How it affects us</a></li>
+        <li><a href="corona3.html">3 - Virus History</a></li>
+        <li><a href="corona4.html">4 - Pros of Corona</a></li>
+        <li><a href="corona5.html">5 - World Economy</a></li>
+        <li><a href="corona6.html">6 - India vs Corona</a></li>
+  
+      </ul>
+    </div>
+
+    <script>
+      $("li").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+
+	</footer>
+</body>
+</html>
